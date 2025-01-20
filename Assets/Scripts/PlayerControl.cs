@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class PlayerControl : MonoBehaviour
 {
-
+    [SerializeField] private InputActionReference moveAction;
+    [SerializeField] private float speed;
     private Vector2 offset;
     private Camera mainCamera;
 
@@ -40,29 +42,37 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Touch.activeFingers.Count > 0)
-        {
-            if(Touch.activeFingers[0].index == 0)
-            {
-                Touch touch = Touch.activeFingers[0].currentTouch;
-                Vector3 touchPos = touch.screenPosition;
-                touchPos = mainCamera.ScreenToWorldPoint(touchPos);
+        Vector2 moveDirection = moveAction.action.ReadValue<Vector2>();
+        transform.Translate(moveDirection * speed * Time.deltaTime);
 
-                if(touch.phase == TouchPhase.Began){
-                    offset = touchPos - transform.position;
-                }
-                if(touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
-                {
-                    transform.position = new Vector3(touchPos.x - offset.x, touchPos.y - offset.y, 0f);
-                }
-                
-                transform.position = new Vector3(
+        transform.position = new Vector3(
                     Mathf.Clamp(transform.position.x, maxLeft, maxRight),
                     Mathf.Clamp(transform.position.y, maxDown, maxUp),
                     0f
                 );
-            }
-        }
+        // if(Touch.activeFingers.Count > 0)
+        // {
+        //     if(Touch.activeFingers[0].index == 0)
+        //     {
+        //         Touch touch = Touch.activeFingers[0].currentTouch;
+        //         Vector3 touchPos = touch.screenPosition;
+        //         touchPos = mainCamera.ScreenToWorldPoint(touchPos);
+
+        //         if(touch.phase == TouchPhase.Began){
+        //             offset = touchPos - transform.position;
+        //         }
+        //         if(touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+        //         {
+        //             transform.position = new Vector3(touchPos.x - offset.x, touchPos.y - offset.y, 0f);
+        //         }
+                
+        //         transform.position = new Vector3(
+        //             Mathf.Clamp(transform.position.x, maxLeft, maxRight),
+        //             Mathf.Clamp(transform.position.y, maxDown, maxUp),
+        //             0f
+        //         );
+        //     }
+        // }
     }
 
     private void OnEnable(){
