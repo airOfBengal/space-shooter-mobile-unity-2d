@@ -16,7 +16,7 @@ public class Meteor : Enemy
 
     void Update()
     {
-        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        transform.Rotate(rotationSpeed * Time.deltaTime * Vector3.forward);
     }
 
     public override void HurtSequence()
@@ -26,7 +26,7 @@ public class Meteor : Enemy
 
     public override void DeathSequence()
     {
-        
+        Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
