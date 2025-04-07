@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8168967572207223977}
   - component: {fileID: 3827079326933599005}
   - component: {fileID: 19369336496742754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MeteorOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,3 +169,4 @@ MonoBehaviour:
   rb: {fileID: 8168967572207223977}
   minSpeed: 8
   maxSpeed: 15
+  rotationSpeed: 100
