@@ -187,6 +187,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -511,7 +524,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jet_Effect_0: -668888643492183904
+      Jet_Effect_1: 4536873548914291102
+      Jet_Effect_10: -1903823963933883214
+      Jet_Effect_11: -922576394827396626
+      Jet_Effect_12: -3443711165553497027
+      Jet_Effect_13: 5748406776559480572
+      Jet_Effect_2: -3468328763088910117
+      Jet_Effect_3: -6299343397316191948
+      Jet_Effect_4: -4977871869243070820
+      Jet_Effect_5: -5355676979762445873
+      Jet_Effect_6: 8521978868338159117
+      Jet_Effect_7: 6445102195081340848
+      Jet_Effect_8: 6512749152236746545
+      Jet_Effect_9: -3360061247044946917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

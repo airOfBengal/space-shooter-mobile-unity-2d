@@ -169,6 +169,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -361,7 +374,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RootGamesLogo_0: -6411793579435863158
+      RootGamesLogo_1: -1548380325480676770
+      RootGamesLogo_2: 7960756032410959103
+      RootGamesLogo_3: -5114681303170206605
+      RootGamesLogo_4: -5270031438282122070
+      RootGamesLogo_5: 2649601527742507241
+      RootGamesLogo_6: -8470357206243605893
+      RootGamesLogo_7: -367949029408954102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
